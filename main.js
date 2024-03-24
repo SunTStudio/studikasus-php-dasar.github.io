@@ -79,7 +79,8 @@ function btnMinumanActive() {
 }
 
 // Pop Up Makanan
-
+let indexMakanan = 0;
+let indexMinuman = 0;
 const listMakanan = document.getElementById("list-makanan");
 const listMinuman = document.getElementById("list-minuman");
 
@@ -107,11 +108,11 @@ function nasiGoreng() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
     buttonInscrease.setAttribute("id", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(0)");
+    buttonInscrease.setAttribute("onclick", `btnTambah(${indexMakanan})`);
     buttonInscrease.innerText = "+";
 
     increseList.append(buttonInscrease);
@@ -124,16 +125,23 @@ function nasiGoreng() {
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahNasiGoreng = document.createElement("input");
+    jumlahNasiGoreng.setAttribute("type", "hidden");
+    jumlahNasiGoreng.setAttribute("name", "jumlahNasiGoreng");
+    jumlahNasiGoreng.classList.add("jumlahItems");
+    increseList.append(jumlahNasiGoreng);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(0)");
+    buttonDecrease.setAttribute("onclick", `btnKurang(${indexMakanan})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMakanan.append(listItem);
+    indexMakanan++;
   }
 }
 
@@ -161,10 +169,10 @@ function miePasta() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(1)");
+    buttonInscrease.setAttribute("onclick", `btnTambah(${indexMakanan})`);
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -178,16 +186,23 @@ function miePasta() {
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahMiePasta = document.createElement("input");
+    jumlahMiePasta.setAttribute("type", "hidden");
+    jumlahMiePasta.setAttribute("name", "jumlahMiePasta");
+    jumlahMiePasta.classList.add("jumlahItems");
+    increseList.append(jumlahMiePasta);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(1)");
+    buttonDecrease.setAttribute("onclick", `btnKurang(${indexMakanan})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMakanan.append(listItem);
+    indexMakanan++;
   }
 }
 
@@ -215,10 +230,10 @@ function beefAyam() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(2)");
+    buttonInscrease.setAttribute("onclick", `btnTambah(${indexMakanan})`);
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -232,16 +247,23 @@ function beefAyam() {
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahBeefAyam = document.createElement("input");
+    jumlahBeefAyam.setAttribute("type", "hidden");
+    jumlahBeefAyam.setAttribute("name", "jumlahBeefAyam");
+    jumlahBeefAyam.classList.add("jumlahItems");
+    increseList.append(jumlahBeefAyam);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(2)");
+    buttonDecrease.setAttribute("onclick", `btnKurang(${indexMakanan})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMakanan.append(listItem);
+    indexMakanan++;
   }
 }
 
@@ -269,10 +291,10 @@ function saladFresh() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(3)");
+    buttonInscrease.setAttribute("onclick", `btnTambah(${indexMakanan})`);
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -286,16 +308,23 @@ function saladFresh() {
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahSaladFresh = document.createElement("input");
+    jumlahSaladFresh.setAttribute("type", "hidden");
+    jumlahSaladFresh.setAttribute("name", "jumlahSaladFresh");
+    jumlahSaladFresh.classList.add("jumlahItems");
+    increseList.append(jumlahSaladFresh);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(3)");
+    buttonDecrease.setAttribute("onclick", `btnKurang(${indexMakanan})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMakanan.append(listItem);
+    indexMakanan++;
   }
 }
 
@@ -323,10 +352,10 @@ function miePastaSumedang() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(4)");
+    buttonInscrease.setAttribute("onclick", `btnTambah(${indexMakanan})`);
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -340,16 +369,23 @@ function miePastaSumedang() {
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahMiePastaSumedang = document.createElement("input");
+    jumlahMiePastaSumedang.setAttribute("type", "hidden");
+    jumlahMiePastaSumedang.setAttribute("name", "jumlahMiePastaSumedang");
+    jumlahMiePastaSumedang.classList.add("jumlahItems");
+    increseList.append(jumlahMiePastaSumedang);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(4)");
+    buttonDecrease.setAttribute("onclick", `btnKurang(${indexMakanan})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMakanan.append(listItem);
+    indexMakanan++;
   }
 }
 
@@ -379,10 +415,13 @@ function esTeh() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(0)");
+    buttonInscrease.setAttribute(
+      "onclick",
+      `btnTambahMinuman(${indexMinuman})`
+    );
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -390,22 +429,29 @@ function esTeh() {
 
     const pSumList = document.createElement("p");
     pSumList.classList.add("ps-2", "pe-2", "pt-1");
-    pSumList.setAttribute("id", "jumlahPcs");
+    pSumList.setAttribute("id", "jumlahPcsMinuman");
     pSumList.setAttribute("name", "jumlahNasi");
     pSumList.innerText = "0";
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahEsTeh = document.createElement("input");
+    jumlahEsTeh.setAttribute("type", "hidden");
+    jumlahEsTeh.setAttribute("name", "jumlahEsTeh");
+    jumlahEsTeh.classList.add("jumlahItemsMinuman");
+    increseList.append(jumlahEsTeh);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(0)");
+    buttonDecrease.setAttribute("onclick", `btnKurangMinuman(${indexMinuman})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMinuman.append(listItem);
+    indexMinuman++;
   }
 }
 
@@ -433,10 +479,13 @@ function esJeruk() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(1)");
+    buttonInscrease.setAttribute(
+      "onclick",
+      `btnTambahMinuman(${indexMinuman})`
+    );
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -444,22 +493,29 @@ function esJeruk() {
 
     const pSumList = document.createElement("p");
     pSumList.classList.add("ps-2", "pe-2", "pt-1");
-    pSumList.setAttribute("id", "jumlahPcs");
+    pSumList.setAttribute("id", "jumlahPcsMinuman");
     pSumList.setAttribute("name", "jumlahNasi");
     pSumList.innerText = "0";
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahEsJeruk = document.createElement("input");
+    jumlahEsJeruk.setAttribute("type", "hidden");
+    jumlahEsJeruk.setAttribute("name", "jumlahEsJeruk");
+    jumlahEsJeruk.classList.add("jumlahItemsMinuman");
+    increseList.append(jumlahEsJeruk);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(1)");
+    buttonDecrease.setAttribute("onclick", `btnKurangMinuman(${indexMinuman})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMinuman.append(listItem);
+    indexMinuman++;
   }
 }
 
@@ -487,10 +543,13 @@ function moccacino() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(2)");
+    buttonInscrease.setAttribute(
+      "onclick",
+      `btnTambahMinuman(${indexMinuman})`
+    );
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -498,22 +557,29 @@ function moccacino() {
 
     const pSumList = document.createElement("p");
     pSumList.classList.add("ps-2", "pe-2", "pt-1");
-    pSumList.setAttribute("id", "jumlahPcs");
+    pSumList.setAttribute("id", "jumlahPcsMinuman");
     pSumList.setAttribute("name", "jumlahNasi");
     pSumList.innerText = "0";
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahMoccacino = document.createElement("input");
+    jumlahMoccacino.setAttribute("type", "hidden");
+    jumlahMoccacino.setAttribute("name", "jumlahMoccacino");
+    jumlahMoccacino.classList.add("jumlahItemsMinuman");
+    increseList.append(jumlahMoccacino);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(2)");
+    buttonDecrease.setAttribute("onclick", `btnKurangMinuman(${indexMinuman})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMinuman.append(listItem);
+    indexMinuman++;
   }
 }
 
@@ -541,10 +607,13 @@ function esCoklat() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(3)");
+    buttonInscrease.setAttribute(
+      "onclick",
+      `btnTambahMinuman(${indexMinuman})`
+    );
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -552,22 +621,29 @@ function esCoklat() {
 
     const pSumList = document.createElement("p");
     pSumList.classList.add("ps-2", "pe-2", "pt-1");
-    pSumList.setAttribute("id", "jumlahPcs");
+    pSumList.setAttribute("id", "jumlahPcsMinuman");
     pSumList.setAttribute("name", "jumlahNasi");
     pSumList.innerText = "0";
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahEsCoklat = document.createElement("input");
+    jumlahEsCoklat.setAttribute("type", "hidden");
+    jumlahEsCoklat.setAttribute("name", "jumlahEsCoklat");
+    jumlahEsCoklat.classList.add("jumlahItemsMinuman");
+    increseList.append(jumlahEsCoklat);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(3)");
+    buttonDecrease.setAttribute("onclick", `btnKurangMinuman(${indexMinuman})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMinuman.append(listItem);
+    indexMinuman++;
   }
 }
 
@@ -595,10 +671,13 @@ function esVanila() {
 
     listItem.append(increseList);
 
-    const buttonInscrease = document.createElement("button");
+    const buttonInscrease = document.createElement("a");
     buttonInscrease.classList.add("btn", "btn-primary", "ms-3");
     buttonInscrease.setAttribute("name", "tambah");
-    buttonInscrease.setAttribute("onclick", "btnTambah(4)");
+    buttonInscrease.setAttribute(
+      "onclick",
+      `btnTambahMinuman(${indexMinuman})`
+    );
     buttonInscrease.setAttribute("id", "tambah");
     buttonInscrease.innerText = "+";
 
@@ -606,43 +685,84 @@ function esVanila() {
 
     const pSumList = document.createElement("p");
     pSumList.classList.add("ps-2", "pe-2", "pt-1");
-    pSumList.setAttribute("id", "jumlahPcs");
+    pSumList.setAttribute("id", "jumlahPcsMinuman");
     pSumList.setAttribute("name", "jumlahNasi");
     pSumList.innerText = "0";
 
     increseList.append(pSumList);
 
-    const buttonDecrease = document.createElement("button");
+    const jumlahEsVanila = document.createElement("input");
+    jumlahEsVanila.setAttribute("type", "hidden");
+    jumlahEsVanila.setAttribute("name", "jumlahEsVanila");
+    jumlahEsVanila.classList.add("jumlahItemsMinuman");
+    increseList.append(jumlahEsVanila);
+
+    const buttonDecrease = document.createElement("a");
     buttonDecrease.classList.add("btn", "btn-primary", "me-3");
     buttonDecrease.setAttribute("name", "kurang");
-    buttonDecrease.setAttribute("onclick", "btnKurang(4)");
+    buttonDecrease.setAttribute("onclick", `btnKurangMinuman(${indexMinuman})`);
     buttonDecrease.setAttribute("id", "kurang");
     buttonDecrease.innerText = "-";
 
     increseList.append(buttonDecrease);
 
     listMinuman.append(listItem);
+    indexMinuman++;
   }
 }
 
 function btnTambah(nomor) {
   let tambah = document.querySelector("#tambah");
   let kurang = document.querySelector("#kurang");
+  let jumlahItems = document.querySelectorAll(".jumlahItems");
   let jumlahPcs = document.querySelectorAll("#jumlahPcs");
   let items = jumlahPcs[nomor].innerText;
 
   items++;
   jumlahPcs[nomor].innerText = items;
+  jumlahItems[nomor].setAttribute("value", `${items}`);
 }
 
 function btnKurang(number) {
   let tambah = document.querySelector("#tambah");
   let kurang = document.querySelector("#kurang");
+  let jumlahItems = document.querySelectorAll(".jumlahItems");
   let jumlahPcs = document.querySelectorAll("#jumlahPcs");
   let items = jumlahPcs[number].innerText;
 
   if (items > 0) {
     items--;
     jumlahPcs[number].innerText = items;
+    jumlahItems[nomor].setAttribute("value", `${items}`);
   }
+}
+
+function btnTambahMinuman(nomor) {
+  let tambah = document.querySelector("#tambah");
+  let kurang = document.querySelector("#kurang");
+  let jumlahItemsMinuman = document.querySelectorAll(".jumlahItemsMinuman");
+  let jumlahPcsMinuman = document.querySelectorAll("#jumlahPcsMinuman");
+  let items = jumlahPcsMinuman[nomor].innerText;
+
+  items++;
+  jumlahPcsMinuman[nomor].innerText = items;
+  jumlahItemsMinuman[nomor].setAttribute("value", `${items}`);
+}
+
+function btnKurangMinuman(number) {
+  let tambah = document.querySelector("#tambah");
+  let kurang = document.querySelector("#kurang");
+  let jumlahItemsMinuman = document.querySelectorAll(".jumlahItemsMinuman");
+  let jumlahPcsMinuman = document.querySelectorAll("#jumlahPcsMinuman");
+  let items = jumlahPcsMinuman[number].innerText;
+
+  if (items > 0) {
+    items--;
+    jumlahPcsMinuman[number].innerText = items;
+    jumlahItemsMinuman[nomor].setAttribute("value", `${items}`);
+  }
+}
+
+function checkoutBtn() {
+  alert("Pesanan Sudah disimpan, Silahkan Klik Checkout!");
 }
