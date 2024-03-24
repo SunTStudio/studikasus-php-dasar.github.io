@@ -1,0 +1,29 @@
+*{
+    font-family: 'montserrat', sans-serif;
+    
+}
+
+#formPemesanan{
+    background: url(img/bg.jpg);
+    background-size: cover;
+}
+
+#formPemesanan .container{
+    height: 80vh;
+    width: 100%;
+}
+
+.jumlahPesan{
+    position: relative;
+}
+
+.jumlahPesan p{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+
+#formPemesanan .container .row .col-3 .card img{
+    height: 40vh;
+    object-fit: cover;
+}
